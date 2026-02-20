@@ -1,15 +1,76 @@
 // — Editable content (edit only these to update the page) —
+
+type ProjectStatus =
+  | "live"
+  | "development"
+  | "beta"
+  | "waitlist"
+  | "paused"
+  | "archived"
+  | "sunset";
+
+const STATUS_META: Record<
+  ProjectStatus,
+  { label: string; pillClassName: string }
+> = {
+  live: {
+    label: "Live",
+    pillClassName:
+      "bg-emerald-500/15 text-emerald-200 ring-1 ring-emerald-500/25",
+  },
+  development: {
+    label: "Development",
+    pillClassName:
+      "bg-sky-500/15 text-sky-200 ring-1 ring-sky-500/25",
+  },
+  beta: {
+    label: "Beta",
+    pillClassName:
+      "bg-indigo-500/15 text-indigo-200 ring-1 ring-indigo-500/25",
+  },
+  waitlist: {
+    label: "Waitlist",
+    pillClassName:
+      "bg-amber-500/15 text-amber-200 ring-1 ring-amber-500/25",
+  },
+  paused: {
+    label: "Paused",
+    pillClassName:
+      "bg-orange-500/15 text-orange-200 ring-1 ring-orange-500/25",
+  },
+  archived: {
+    label: "Archived",
+    pillClassName:
+      "bg-zinc-500/15 text-zinc-200 ring-1 ring-zinc-500/25",
+  },
+  sunset: {
+    label: "Sunset",
+    pillClassName:
+      "bg-rose-500/15 text-rose-200 ring-1 ring-rose-500/25",
+  },
+};
+
 const LINK_X = "https://x.com/rvdobuilds";
 const EMAIL = "rvdobuilds@proton.me";
-const PRODUCTS = [
+type Product = {
+  name: string;
+  oneLiner: string;
+  status: ProjectStatus;
+  href: string;
+};
+const meta = STATUS_META[product.status];
+
+<span className={`inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium ${meta.pillClassName}`}>
+  {meta.label}
+</span>
+const PRODUCTS: Product[] = [
   {
     name: "FocusLedger",
-    oneLiner:
-      "Simple focus and time tracking for deep work. Less noise, more clarity.",
-    status: "Development",
+    oneLiner: "Daily focus tracking for builders.",
+    status: "development",
     href: "#",
   },
-] as const;
+]; as const;
 
 function Section({
   id,
