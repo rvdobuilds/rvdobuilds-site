@@ -121,18 +121,25 @@ export default function Home() {
         </header>
 
         {/* About */}
-        <Section id="about" title="About">
-          <p className="max-w-xl text-base leading-relaxed text-white/85">
-I build focused digital products designed to be small, sustainable and useful.
+<Section id="about" title="About">
+  <div className="max-w-xl space-y-5 text-base leading-relaxed text-white/85">
+    <p>
+      I build focused digital products designed to be small, sustainable and useful.
+    </p>
 
-Instead of chasing big launches, I ship simple tools that solve specific problems — then refine them into durable systems.
+    <p>
+      Instead of chasing big launches, I ship simple tools that solve specific problems, and then refine them into durable systems.
+    </p>
 
-Each product is a small bet.
-Over time, those bets compound.
+    <p>
+      Each product is a small bet. Over time, those bets compound.
+    </p>
 
-Based in the Netherlands. Husband. Dad of two. Builder.
-          </p>
-        </Section>
+    <p>
+      Based in the Netherlands. Husband. Dad of two. Builder.
+    </p>
+  </div>
+</Section>
 
         {/* Products */}
         <Section id="products" title="Products">
