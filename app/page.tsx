@@ -9,10 +9,7 @@ type ProjectStatus =
   | "archived"
   | "sunset";
 
-const STATUS_META: Record<
-  ProjectStatus,
-  { label: string; pillClassName: string }
-> = {
+const STATUS_META: Record<ProjectStatus,  { label: string; pillClassName: string }> = {
   live: {
     label: "Live",
     pillClassName:
@@ -58,19 +55,14 @@ type Product = {
   status: ProjectStatus;
   href: string;
 };
-const meta = STATUS_META[product.status];
-
-<span className={`inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium ${meta.pillClassName}`}>
-  {meta.label}
-</span>
 const PRODUCTS: Product[] = [
   {
     name: "FocusLedger",
-    oneLiner: "Daily focus tracking for builders.",
+    oneLiner: "Simple focus and time tracking for deep work. Less noise, more clarity.",
     status: "development",
     href: "#",
   },
-]; as const;
+] as const;
 
 function Section({
   id,
@@ -102,18 +94,25 @@ function ProductCard({
 }: {
   name: string;
   oneLiner: string;
-  status: string;
+  status: ProjectStatus;
   href: string;
 }) {
+  const meta = STATUS_META[status];
+
   return (
     <div className="rounded-lg border border-white/15 bg-white/[0.02] p-6 transition-colors duration-200 hover:border-white/25 hover:bg-white/[0.04]">
       <div className="mb-3 flex items-center gap-3">
         <h3 className="text-lg font-semibold text-white">{name}</h3>
-        <span className="rounded-full border border-emerald-500/30 bg-emerald-500/15 px-2.5 py-0.5 text-xs font-medium text-emerald-400">
-          {status}
+
+        <span
+          className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${meta.pillClassName}`}
+        >
+          {meta.label}
         </span>
       </div>
+
       <p className="mb-5 text-sm leading-relaxed text-white/80">{oneLiner}</p>
+
       <a
         href={href}
         className="inline-block text-sm font-medium text-white underline decoration-white/50 underline-offset-4 transition-colors duration-200 hover:decoration-white"
