@@ -123,10 +123,14 @@ export default function Home() {
         {/* About */}
         <Section id="about" title="About">
           <p className="max-w-xl text-base leading-relaxed text-white/85">
-            I’m an independent builder who prefers shipping over planning. I
-            focus on small, profitable products that compound over time—no hype,
-            no scale-at-all-costs. I care about systems that last and work that
-            pays for itself.
+I build focused digital products designed to be small, sustainable and useful.
+
+Instead of chasing big launches, I ship simple tools that solve specific problems — then refine them into durable systems.
+
+Each product is a small bet.
+Over time, those bets compound.
+
+Based in the Netherlands. Husband. Dad of two. Builder.
           </p>
         </Section>
 
