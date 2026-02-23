@@ -62,6 +62,12 @@ const PRODUCTS: Product[] = [
     status: "development",
     href: "#",
   },
+  {
+    name: "AppScope",
+    oneLiner: "Turn an overwhelmed mobile app idea into a clear, build-ready v1 plan in ~3 minutes.",
+    status: "development",
+    href: "#",
+  },
 ] as const;
 
 function Section({
