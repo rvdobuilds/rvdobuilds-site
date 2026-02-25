@@ -1,22 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0E1116;
+  --foreground: #E6EAF0;
+  --section: #12161C;
+  --card: #161B22;
+  --card-hover: #1a1f26;
+  --muted: #9AA4B2;
+  --accent: #1F7A5C;
+  --accent-hover: #259A73;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --max-width-content: 1100px;
+  --hero-glow: radial-gradient(circle at 50% 30%, rgba(31, 122, 92, 0.18), transparent 60%);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-section: var(--section);
+  --color-card: var(--card);
+  --color-card-hover: var(--card-hover);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --max-width-content: var(--max-width-content);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.hero-glow {
+  background: var(--hero-glow);
 }
 
 html {
@@ -26,5 +39,4 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }

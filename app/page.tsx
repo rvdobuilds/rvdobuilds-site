@@ -1,261 +1,131 @@
-// — Editable content (edit only these to update the page) —
-
-type ProjectStatus =
-  | "live"
-  | "development"
-  | "beta"
-  | "waitlist"
-  | "paused"
-  | "archived"
-  | "sunset";
-
-const STATUS_META: Record<ProjectStatus,  { label: string; pillClassName: string }> = {
-  live: {
-    label: "Live",
-    pillClassName:
-      "bg-emerald-500/15 text-emerald-200 ring-1 ring-emerald-500/25",
-  },
-  development: {
-    label: "Development",
-    pillClassName:
-      "bg-sky-500/15 text-sky-200 ring-1 ring-sky-500/25",
-  },
-  beta: {
-    label: "Beta",
-    pillClassName:
-      "bg-indigo-500/15 text-indigo-200 ring-1 ring-indigo-500/25",
-  },
-  waitlist: {
-    label: "Waitlist",
-    pillClassName:
-      "bg-amber-500/15 text-amber-200 ring-1 ring-amber-500/25",
-  },
-  paused: {
-    label: "Paused",
-    pillClassName:
-      "bg-orange-500/15 text-orange-200 ring-1 ring-orange-500/25",
-  },
-  archived: {
-    label: "Archived",
-    pillClassName:
-      "bg-zinc-500/15 text-zinc-200 ring-1 ring-zinc-500/25",
-  },
-  sunset: {
-    label: "Sunset",
-    pillClassName:
-      "bg-rose-500/15 text-rose-200 ring-1 ring-rose-500/25",
-  },
-};
-
-const LINK_X = "https://x.com/rvdobuilds";
-const EMAIL = "rvdobuilds@proton.me";
-type Product = {
-  name: string;
-  oneLiner: string;
-  status: ProjectStatus;
-  href: string;
-};
-const PRODUCTS: Product[] = [
-  {
-    name: "FocusLedger",
-    oneLiner: "Simple focus and time tracking for deep work. Less noise, more clarity.",
-    status: "development",
-    href: "#",
-  },
-  {
-    name: "AppScope",
-    oneLiner: "Turn an overwhelmed mobile app idea into a clear, build-ready v1 plan in ~3 minutes.",
-    status: "development",
-    href: "#",
-  },
-] as const;
-
-function Section({
-  id,
-  title,
-  children,
-}: {
-  id?: string;
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section
-      id={id}
-      className="scroll-mt-24 py-20 md:scroll-mt-28 md:py-28"
-    >
-      <h2 className="mb-10 text-xs font-medium uppercase tracking-widest text-white/70">
-        {title}
-      </h2>
-      {children}
-    </section>
-  );
-}
-
-function ProductCard({
-  name,
-  oneLiner,
-  status,
-  href,
-}: {
-  name: string;
-  oneLiner: string;
-  status: ProjectStatus;
-  href: string;
-}) {
-  const meta = STATUS_META[status];
-
-  return (
-    <div className="rounded-lg border border-white/15 bg-white/[0.02] p-6 transition-colors duration-200 hover:border-white/25 hover:bg-white/[0.04]">
-      <div className="mb-3 flex items-center gap-3">
-        <h3 className="text-lg font-semibold text-white">{name}</h3>
-
-        <span
-          className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${meta.pillClassName}`}
-        >
-          {meta.label}
-        </span>
-      </div>
-
-      <p className="mb-5 text-sm leading-relaxed text-white/80">{oneLiner}</p>
-
-      <a
-        href={href}
-        className="inline-block text-sm font-medium text-white underline decoration-white/50 underline-offset-4 transition-colors duration-200 hover:decoration-white"
-      >
-        View →
-      </a>
-    </div>
-  );
-}
+import { Section } from "@/components/ui/Section";
+import { ButtonLink } from "@/components/ui/Button";
+import { ProductCard } from "@/components/ui/ProductCard";
+import { PRODUCTS } from "@/lib/products";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div
-      className="min-h-screen text-white"
-      style={{ backgroundColor: "#0f0f14" }}
-    >
-      <div className="mx-auto max-w-2xl px-6 py-20 sm:px-8 md:py-28">
-        <nav
-          className="sticky top-0 z-10 -mx-6 -mt-6 flex justify-end gap-6 px-6 py-5 sm:-mx-8 sm:px-8 md:-mt-8 md:py-6"
-          style={{ backgroundColor: "rgba(15, 15, 20, 0.85)" }}
-          aria-label="Main"
-        >
-          <a
-            href="#about"
-            className="text-sm text-white/80 transition-colors duration-200 hover:text-white"
-          >
-            About
-          </a>
-          <a
-            href="#products"
-            className="text-sm text-white/80 transition-colors duration-200 hover:text-white"
-          >
-            Products
-          </a>
-          <a
-            href="#exploring"
-            className="text-sm text-white/80 transition-colors duration-200 hover:text-white"
-          >
-            Exploring
-          </a>
-        </nav>
-        {/* Hero */}
-        <header className="pb-24 pt-10 md:pb-32 md:pt-14">
-          <h1 className="text-3xl font-semibold leading-[1.15] tracking-tight text-white sm:text-4xl md:text-5xl md:leading-[1.12]">
-            I build small software assets designed to generate long-term
-            leverage.
-          </h1>
-          <p className="mt-8 max-w-lg text-lg leading-relaxed text-white/85">
-            Independent product builder focused on sustainable, profitable
-            digital products. Small bets. Real systems. Built to compound.
+    <main className="min-h-screen">
+      {/* Hero */}
+      <section className="hero-glow">
+        <Section id="hero">
+          <p className="text-xs font-medium uppercase tracking-widest text-muted">
+            RvdoBuilds • A software studio building small, profitable products
           </p>
-          <div className="mt-12 flex flex-wrap gap-4">
-            <a
-              href="#products"
-              className="inline-flex h-11 min-w-[10rem] items-center justify-center rounded-md bg-white px-6 text-sm font-medium text-[#0f0f14] transition-colors duration-200 hover:bg-white/90"
-            >
-              View products
-            </a>
-            <a
-              href={LINK_X}
-              className="inline-flex h-11 min-w-[10rem] items-center justify-center rounded-md border border-white/20 px-6 text-sm font-medium text-white transition-colors duration-200 hover:border-white/35 hover:bg-white/[0.06]"
-            >
-              Follow on X
-            </a>
+          <h1 className="mt-6 text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl md:text-[2.5rem]">
+            Building small software assets.
+          </h1>
+          <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted">
+            Focused tools, shipped fast, refined for long-term cashflow.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <ButtonLink href="/products" variant="primary">
+              View products →
+            </ButtonLink>
+            <ButtonLink href="/thesis" variant="ghost">
+              Read the thesis →
+            </ButtonLink>
           </div>
-        </header>
+        </Section>
+      </section>
 
-        {/* About */}
-<Section id="about" title="About">
-  <div className="max-w-xl space-y-5 text-base leading-relaxed text-white/85">
-    <p>
-      I build focused digital products designed to be small, sustainable and useful.
-    </p>
+      {/* Operating principles */}
+      <Section id="operating-principles">
+        <h2 className="mb-10 text-xs font-medium uppercase tracking-widest text-muted">
+          Operating principles
+        </h2>
+        <div className="max-w-[48rem] space-y-8">
+          <div>
+            <h3 className="text-lg font-semibold text-foreground">
+              Small bets
+            </h3>
+            <p className="mt-1 max-w-prose text-sm text-muted">
+              Start small. Ship fast. Let reality decide.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-foreground">
+              Systems over noise
+            </h3>
+            <p className="mt-1 max-w-prose text-sm text-muted">
+              Build durable workflows and product loops, not launch hype.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-foreground">
+              Cashflow validates focus
+            </h3>
+            <p className="mt-1 max-w-prose text-sm text-muted">
+              Revenue is signal. Features are assumptions.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-foreground">
+              Compounding over time
+            </h3>
+            <p className="mt-1 max-w-prose text-sm text-muted">
+              Ship, learn, refine. Repeat until it's obvious.
+            </p>
+          </div>
+        </div>
+        <p className="mt-10">
+          <Link
+            href="/thesis"
+            className="text-sm font-medium text-accent transition-colors hover:text-accent-hover"
+          >
+            Read the thesis →
+          </Link>
+        </p>
+      </Section>
 
-    <p>
-      Instead of chasing big launches, I ship simple tools that solve specific problems, and then refine them into durable systems.
-    </p>
-
-    <p>
-      Each product is a small bet. Over time, those bets compound.
-    </p>
-
-    <p>
-      Based in the Netherlands. Husband. Dad of two. Builder.
-    </p>
-  </div>
-</Section>
-
-        {/* Products */}
-        <Section id="products" title="Products">
-          <div className="grid gap-8 sm:grid-cols-2">
+      {/* Products */}
+      <section className="bg-section">
+        <Section id="products">
+          <h2 className="mb-10 text-xs font-medium uppercase tracking-widest text-muted">
+            Products
+          </h2>
+          <div className="grid gap-6 sm:grid-cols-2">
             {PRODUCTS.map((product) => (
               <ProductCard
                 key={product.name}
                 name={product.name}
-                oneLiner={product.oneLiner}
+                description={product.oneLiner}
                 status={product.status}
                 href={product.href}
               />
             ))}
           </div>
         </Section>
+      </section>
 
-        {/* Currently exploring */}
-        <Section id="exploring" title="Currently exploring">
-          <p className="max-w-xl text-base leading-relaxed text-white/85">
-            Better sleep and circadian alignment.
-            <br />
-            Lightweight tools for focus and time.
-            <br />
-            Small, recurring revenue without growth theater.
-            <br />
-            Writing and sharing what I learn along the way.
-          </p>
-        </Section>
+      {/* Thesis preview */}
+      <Section id="thesis-preview">
+        <h2 className="mb-10 text-xs font-medium uppercase tracking-widest text-muted">
+          Thesis
+        </h2>
+        <p className="max-w-2xl text-base leading-relaxed text-muted">
+          We believe in small, focused software—shipped fast and refined over
+          time. No growth theater; real systems that compound. Read how we think
+          about building and running products.
+        </p>
+        <p className="mt-6">
+          <Link
+            href="/thesis"
+            className="text-sm font-medium text-accent transition-colors hover:text-accent-hover"
+          >
+            Read the thesis →
+          </Link>
+        </p>
+      </Section>
 
-        {/* Footer */}
-        <footer className="border-t border-white/15 py-14">
-          <p className="text-sm text-white/75">
+      <footer className="border-t border-[var(--border-subtle)] bg-background">
+        <Section>
+          <p className="text-sm text-muted">
             Building quietly. Compounding over time.
           </p>
-          <div className="mt-6 flex gap-8">
-            <a
-              href={LINK_X}
-              className="text-sm text-white/80 underline decoration-white/40 underline-offset-4 transition-colors duration-200 hover:text-white hover:decoration-white/70"
-            >
-              X
-            </a>
-            <a
-              href={`mailto:${EMAIL}`}
-              className="text-sm text-white/80 underline decoration-white/40 underline-offset-4 transition-colors duration-200 hover:text-white hover:decoration-white/70"
-            >
-              Email
-            </a>
-          </div>
-        </footer>
-      </div>
-    </div>
+        </Section>
+      </footer>
+    </main>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,16 +14,48 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "rvdobuilds",
+  title: "RvdoBuilds — A software studio",
   description:
-    "Independent product builder. Small software assets designed for long-term leverage—sustainable, profitable digital products that compound.",
+    "A software studio building small, profitable products. Focused tools, shipped fast, refined for long-term cashflow.",
   openGraph: {
-    title: "rvdobuilds",
+    title: "RvdoBuilds — A software studio",
     description:
-      "Independent product builder. Small software assets designed for long-term leverage—sustainable, profitable digital products that compound.",
+      "A software studio building small, profitable products. Focused tools, shipped fast, refined for long-term cashflow.",
     type: "website",
   },
 };
+
+function Navbar() {
+  return (
+    <nav
+      className="sticky top-0 z-10 border-b border-[var(--border-subtle)] bg-background/90 backdrop-blur-sm"
+      aria-label="Main"
+    >
+      <div className="mx-auto flex h-14 max-w-[var(--max-width-content)] items-center justify-between px-6 sm:px-8">
+        <Link
+          href="/"
+          className="text-sm font-medium text-foreground transition-colors hover:text-accent"
+        >
+          RvdoBuilds
+        </Link>
+        <div className="flex items-center gap-8">
+          <Link
+            href="/products"
+            className="text-sm text-muted transition-colors hover:text-foreground"
+          >
+            Products
+          </Link>
+          <Link
+            href="/thesis"
+            className="text-sm text-muted transition-colors hover:text-foreground"
+          >
+            Thesis
+          </Link>
+        </div>
+      </div>
+    </nav>
+  );
+}
 
 export default function RootLayout({
   children,
@@ -30,10 +63,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-background text-foreground">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
