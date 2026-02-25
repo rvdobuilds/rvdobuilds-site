@@ -28,6 +28,16 @@ Non-negotiable. All UI work must follow this system.
 
 ---
 
+### DESIGN SYSTEM PROTECTION
+
+- Never delete, rename, or modify design tokens without explicit user approval.
+- Never introduce a second accent color.
+- Never switch to light theme.
+- Never remove shared UI components (Button, Section, ProductCard) without approval.
+- If a change conflicts with this system, ask before proceeding.
+
+---
+
 ## DESIGN SYSTEM (TOKENS — MUST BE IMPLEMENTED)
 
 ### Colors (never hardcode hex values inside components)

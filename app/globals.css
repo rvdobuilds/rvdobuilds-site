@@ -11,7 +11,7 @@
   --accent-hover: #259A73;
   --border-subtle: rgba(255, 255, 255, 0.06);
   --max-width-content: 1100px;
-  --hero-glow: radial-gradient(circle at 50% 30%, rgba(31, 122, 92, 0.18), transparent 60%);
+  --hero-glow: radial-gradient(circle at 50% 30%, rgba(31, 122, 92, 0.10), transparent 60%);
 }
 
 @theme inline {

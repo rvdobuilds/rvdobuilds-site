@@ -9,15 +9,19 @@ export default function Home() {
     <main className="min-h-screen">
       {/* Hero */}
       <section className="hero-glow">
-        <Section id="hero">
+        <Section id="hero" className="py-20 md:py-28">
           <p className="text-xs font-medium uppercase tracking-widest text-muted">
             RvdoBuilds • A software studio building small, profitable products
           </p>
-          <h1 className="mt-6 text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl md:text-[2.5rem]">
-            Building small software assets.
+          <h1 className="mt-6 text-3xl font-medium leading-tight tracking-tight text-foreground sm:text-4xl md:text-[2.5rem]">
+            Building small
+            <br />
+              compounding software assets.
           </h1>
-          <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted">
-            Focused tools, shipped fast, refined for long-term cashflow.
+          <p className="mt-10 max-w-lg text-lg leading-relaxed text-muted">
+            Focused tools.
+            <br />
+            Small bets. Built to compound.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <ButtonLink href="/products" variant="primary">
@@ -27,6 +31,16 @@ export default function Home() {
               Read the thesis →
             </ButtonLink>
           </div>
+          <p className="mt-5">
+            <a
+              href="https://x.com/rvdobuilds"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-accent transition-colors hover:text-accent-hover"
+            >
+              Follow the build on X →
+            </a>
+          </p>
         </Section>
       </section>
 
@@ -105,7 +119,7 @@ export default function Home() {
           Thesis
         </h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
-          We believe in small, focused software—shipped fast and refined over
+          We believe in small, focused software - shipped fast and refined over
           time. No growth theater; real systems that compound. Read how we think
           about building and running products.
         </p>

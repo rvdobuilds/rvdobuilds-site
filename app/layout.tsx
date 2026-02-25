@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RvdoBuilds — A software studio",
+  title: "Rvdo Builds",
   description:
     "A software studio building small, profitable products. Focused tools, shipped fast, refined for long-term cashflow.",
   openGraph: {
-    title: "RvdoBuilds — A software studio",
+    title: "Rvdo Builds",
     description:
       "A software studio building small, profitable products. Focused tools, shipped fast, refined for long-term cashflow.",
     type: "website",
