@@ -14,13 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rvdo Builds",
-  description:
-    "A software studio building small, profitable products. Focused tools, shipped fast, refined for long-term cashflow.",
+  title: "Rvdobuilds",
+  description: "Small software products and practical tools.",
   openGraph: {
-    title: "Rvdo Builds",
-    description:
-      "A software studio building small, profitable products. Focused tools, shipped fast, refined for long-term cashflow.",
+    title: "Rvdobuilds",
+    description: "Small software products and practical tools.",
     type: "website",
   },
 };
@@ -36,20 +34,26 @@ function Navbar() {
           href="/"
           className="text-sm font-medium text-foreground transition-colors hover:text-accent"
         >
-          RvdoBuilds
+          Rvdobuilds
         </Link>
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-6 sm:gap-8">
           <Link
-            href="/products"
+            href="/#products"
             className="text-sm text-muted transition-colors hover:text-foreground"
           >
             Products
           </Link>
           <Link
-            href="/thesis"
+            href="/#tools"
             className="text-sm text-muted transition-colors hover:text-foreground"
           >
-            Thesis
+            Tools
+          </Link>
+          <Link
+            href="/#about"
+            className="text-sm text-muted transition-colors hover:text-foreground"
+          >
+            About
           </Link>
         </div>
       </div>
