@@ -28,7 +28,7 @@ For now, optimize for this:
 ### 1. Header
 Contains:
 - wordmark / site name
-- primary nav links: Products, Tools, About
+- primary nav links: Products, Games, Tools, About
 
 Header behavior:
 - calm
@@ -69,16 +69,24 @@ Structure:
 - grid only when screen width allows
 - each card includes title, short description, status, and CTA state
 
-### 5. Tools
+### 5. Games
 Purpose:
-- show supporting software tools, references, or workflow assets
-- these sit below products in hierarchy
+- show active games as a first-class category alongside products
 
 Structure:
-- lighter-weight than product cards
+- closer to product cards than tool cards in weight
 - still coherent with the same system
 
-### 6. About
+### 6. Tools
+Purpose:
+- show supporting software tools, references, or workflow assets
+- these sit below products and games in hierarchy
+
+Structure:
+- lighter-weight than product and game cards
+- still coherent with the same system
+
+### 7. About
 Purpose:
 - briefly explain the point of view behind the work
 - reinforce clarity, simplicity, and useful software
@@ -88,7 +96,7 @@ Rules:
 - no long biography
 - no résumé-style chronology
 
-### 7. Footer
+### 8. Footer
 Contains:
 - site name
 - small external links if needed
@@ -128,7 +136,7 @@ Short studio/about page
 
 ## Navigation rules
 - Keep nav labels short and literal
-- Use Products before Tools
-- Never let Tools visually outrank Products
+- Use Products before Games before Tools
+- Never let Tools visually outrank Products or Games
 - Avoid adding Blog, Notes, Writing, Experiments, or Contact unless they are truly needed
 - Keep the path structure obvious and low-maintenance

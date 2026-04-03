@@ -103,10 +103,25 @@ Recommended category values:
 - internal-tool-public
 
 Rules:
-- tools must not carry more visual weight than products on the homepage
+- tools must not carry more visual weight than products or games on the homepage
 - keep descriptions practical and short
 
-### 6. About block
+### 6. Game
+First-class studio game or interactive release.
+
+Fields:
+- slug
+- name
+- shortDescription
+- ctaLabel
+- ctaHref
+- sortOrder
+
+Rules:
+- shortDescription must be one concise sentence
+- game cards should feel closer to product cards than tool cards, without breaking the calm premium tone
+
+### 7. About block
 Short studio/about content.
 
 Fields:
@@ -145,10 +160,11 @@ Extra fields:
 ## Homepage assembly order
 Use this order:
 1. Hero
-2. Featured item
+2. Featured item (optional; omit if redundant with Products)
 3. Products list
-4. Tools list
-5. About block
+4. Games list
+5. Tools list
+6. About block
 
 ## Display logic
 ### Product visibility
@@ -162,6 +178,11 @@ Show tools on the homepage when:
 - they are publicly accessible or intentionally listed
 - the content is mature enough to represent the studio well
 
+### Game visibility
+Show games on the homepage when:
+- they are publicly accessible or intentionally listed
+- the release is mature enough to represent the studio well
+
 ### Featured logic
 If a featured item exists, it must appear before the products list.
 If the featured item is also in the main products list, avoid making the later card feel redundant.
@@ -171,6 +192,7 @@ CTA labels should stay literal.
 Preferred patterns:
 - Visit product
 - View product
+- Open game
 - Open tool
 - Read guide
 - Join waitlist
