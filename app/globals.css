@@ -1,20 +1,55 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0b0e14;
-  --foreground: #f8fafc;
-  --section: #0f1218;
-  --card: #161922;
-  --card-hover: #1a1e28;
-  --muted: #94a3b8;
-  --accent: #64748b;
-  --accent-hover: #94a3b8;
-  --border-subtle: #262b37;
+  /* Page */
+  --background: #090a0e;
+  --background-elevated: #0c0d12;
+
+  /* Surfaces */
+  --card: #15171e;
+  --card-muted: #16181f;
+  --card-elevated: #181a22;
+  --card-hover: #181a22;
+  --card-nested: #1e222b;
+  --card-nested-deep: #252a34;
+
+  /* Section bands */
+  --section: #0c0d12;
+
+  /* Text */
+  --foreground: #f3eedf;
+  --muted: #b6becb;
+  --eyebrow: #9aa3b2;
+
+  /* Borders */
+  --border-subtle: #3a414d;
+  --border-strong: #4a525f;
+  --border-accent: rgba(243, 238, 223, 0.075);
+
+  /* Accent (cool blue — restrained highlights only) */
+  --accent: #7d9cc9;
+  --accent-dim: #6e8eb8;
+  --accent-ring: rgba(125, 156, 201, 0.16);
+
+  /* CTA */
+  --cta-dark-bg: #1c1f27;
+  --cta-dark-text: #f3eedf;
+  --cta-dark-hover: #252932;
+  --cta-light-bg: #f1ead9;
+  --cta-light-text: #0d1322;
+  --cta-light-hover: #e8e0cf;
+
+  /* Chrome */
+  --chrome: rgba(12, 13, 17, 0.94);
+
+  /* Layout */
   --max-width-content: 1100px;
+
+  /* Hero subtle depth */
   --hero-depth: radial-gradient(
-    ellipse 120% 80% at 50% -20%,
-    rgba(255, 255, 255, 0.04),
-    transparent 55%
+    ellipse 110% 70% at 50% -10%,
+    rgba(255, 255, 255, 0.03),
+    transparent 60%
   );
 }
 
@@ -24,9 +59,11 @@
   --color-section: var(--section);
   --color-card: var(--card);
   --color-card-hover: var(--card-hover);
+  --color-card-nested: var(--card-nested);
   --color-muted: var(--muted);
+  --color-eyebrow: var(--eyebrow);
   --color-accent: var(--accent);
-  --color-accent-hover: var(--accent-hover);
+  --color-accent-dim: var(--accent-dim);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --max-width-content: var(--max-width-content);
