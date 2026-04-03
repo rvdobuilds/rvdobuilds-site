@@ -28,6 +28,7 @@ export default function Home() {
       </section>
 
       {/* ── Featured ─────────────────────────────────────────── */}
+      {/* Disabled — uncomment to feature a product
       <section className="bg-section">
         <Section id="featured">
           <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.18em] text-eyebrow">
@@ -57,6 +58,7 @@ export default function Home() {
           </article>
         </Section>
       </section>
+      */}
 
       {/* ── Products ─────────────────────────────────────────── */}
       <Section id="products">
