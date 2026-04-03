@@ -83,6 +83,20 @@ export default function Home() {
             </p>
             <p className="mt-5 text-sm font-medium text-muted">Coming soon</p>
           </article>
+          <article className="rounded-xl border border-[var(--border-subtle)] bg-card p-6 transition-colors duration-200 hover:bg-card-hover">
+            <h3 className="text-lg font-semibold text-foreground">Todo Mode</h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted">
+              A focused todo app built around doing, not managing.
+            </p>
+            <a
+              href="https://todo-mode.rvdobuilds.com/"
+              target="_blank"
+              rel={externalRel}
+              className="mt-5 inline-block text-sm font-medium text-muted transition-colors hover:text-foreground"
+            >
+              Visit product
+            </a>
+          </article>
         </div>
       </Section>
 
@@ -118,6 +132,22 @@ export default function Home() {
               </p>
               <a
                 href="https://mobiledevworkflow.rvdobuilds.com/"
+                target="_blank"
+                rel={externalRel}
+                className="mt-5 inline-block text-sm font-medium text-muted transition-colors hover:text-foreground"
+              >
+                Open tool
+              </a>
+            </article>
+            <article className="rounded-xl border border-[var(--border-subtle)] bg-card p-6 transition-colors duration-200 hover:bg-card-hover">
+              <h3 className="text-lg font-semibold text-foreground">
+                Claude Code Kit
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted">
+                A curated kit of prompts and workflows for building with Claude Code.
+              </p>
+              <a
+                href="https://claudecodekit.rvdobuilds.com/"
                 target="_blank"
                 rel={externalRel}
                 className="mt-5 inline-block text-sm font-medium text-muted transition-colors hover:text-foreground"
