@@ -47,9 +47,23 @@ export const HOME_PRODUCTS: HomeProduct[] = [
     ctaLabel: "Coming soon",
     href: null,
   },
+  {
+    name: "DayWell",
+    shortDescription:
+      "A minimal daily health timeline for weight, fasting, coffee, meals, creatine, and cold showers.",
+    ctaLabel: "Coming soon",
+    href: null,
+  },
 ];
 
 export const HOME_GAMES: HomeGame[] = [
+  {
+    name: "GoldenAI",
+    shortDescription:
+      "A mobile-first browser shooter slice that captures the feel of classic N64-era espionage shooters.",
+    ctaLabel: "Open game",
+    href: "https://goldenai.rvdobuilds.com/",
+  },
   {
     name: "Voidrunner",
     shortDescription:
