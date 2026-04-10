@@ -27,6 +27,13 @@ export type HomeTool = {
 
 export const HOME_PRODUCTS: HomeProduct[] = [
   {
+    name: "WorkCompass AI",
+    shortDescription:
+      "A practical AI starting-point tool for office workers, helping you discover where AI can actually help in your work.",
+    ctaLabel: "Visit product",
+    href: "https://workcompass-ai.rvdobuilds.com/",
+  },
+  {
     name: "Spend Meter",
     shortDescription:
       "iPhone app for knowing what you can safely spend before payday.",
