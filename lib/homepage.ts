@@ -41,6 +41,13 @@ export const HOME_PRODUCTS: HomeProduct[] = [
     href: "https://spendmeter.app",
   },
   {
+    name: "DayWell",
+    shortDescription:
+      "A minimal daily health timeline for weight, fasting, coffee, meals, creatine, and cold showers.",
+    ctaLabel: "Visit product",
+    href: "https://daywell.rvdobuilds.com/",
+  },
+  {
     name: "TodoMode",
     shortDescription:
       "A calm, focused planning app for turning projects into clear weekly and daily execution.",
@@ -51,13 +58,6 @@ export const HOME_PRODUCTS: HomeProduct[] = [
     name: "HomeReps",
     shortDescription:
       "Minimal home workout logging for GTG sets and simple sessions.",
-    ctaLabel: "Coming soon",
-    href: null,
-  },
-  {
-    name: "DayWell",
-    shortDescription:
-      "A minimal daily health timeline for weight, fasting, coffee, meals, creatine, and cold showers.",
     ctaLabel: "Coming soon",
     href: null,
   },
