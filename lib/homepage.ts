@@ -25,7 +25,17 @@ export type HomeTool = {
   href: string;
 };
 
-export const HOME_PRODUCTS: HomeProduct[] = [
+/** Shown at the top of the homepage products flow, above the other product cards. */
+export const FEATURED_HOME_PRODUCT: HomeProduct = {
+  name: "Spend to Invoice",
+  shortDescription:
+    "A narrow utility for agencies that still turn Google Ads billing data into client invoices by hand.",
+  ctaLabel: "Visit product",
+  href: "https://spendtoinvoice.com/",
+};
+
+/** All homepage products after the featured card, in display order. Does not include Spend to Invoice. */
+export const OTHER_HOME_PRODUCTS: HomeProduct[] = [
   {
     name: "WorkCompass AI",
     shortDescription:
