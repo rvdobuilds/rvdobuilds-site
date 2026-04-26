@@ -4,9 +4,9 @@ import { PRODUCTS } from "@/lib/products";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Products — RvdoBuilds",
+  title: "Products - Rvdobuilds",
   description:
-    "Focused software tools from RvdoBuilds. Small products, shipped fast.",
+    "IT architect turned AI-assisted product builder. I turn business problems into clear, usable products.",
 };
 
 export default function ProductsPage() {

@@ -10,23 +10,22 @@ export default function Home() {
             Rvdobuilds
           </p>
           <h1 className="mt-5 max-w-2xl text-[2rem] font-semibold leading-[1.14] tracking-tight text-foreground sm:text-4xl md:text-[2.75rem]">
-            I&rsquo;ve spent 10 years translating messy business problems into
-            IT solutions.
-            <br className="hidden sm:block" /> Now I build the products too.
+            I turn business problems into working products.
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted">
-            IT architect by day. Product builder by habit. I use AI-assisted
-            development to go from problem to working product. Fast.
+            IT architect with 10 years between business and technology. Now I
+            use AI-assisted development to go from problem and product thinking
+            to shipped web and mobile products.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <ButtonLink href="/work" variant="primary">
               See my work
             </ButtonLink>
             <ButtonLink
-              href="/about#what-im-looking-for"
+              href="/about#work-with-me"
               variant="ghost"
             >
-              What I&rsquo;m looking for
+              Work with me
             </ButtonLink>
           </div>
         </Section>

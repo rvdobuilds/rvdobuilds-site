@@ -2,9 +2,9 @@ import { Section } from "@/components/ui/Section";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Thesis — RvdoBuilds",
+  title: "Thesis - Rvdobuilds",
   description:
-    "How we think about building small, profitable software. No growth theater; real systems that compound.",
+    "IT architect turned AI-assisted product builder. I turn business problems into clear, usable products.",
 };
 
 export default function ThesisPage() {
