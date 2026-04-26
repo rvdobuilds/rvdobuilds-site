@@ -14,7 +14,7 @@ const externalLinkClass =
 
 const sections = [
   {
-    label: "Currently building",
+    label: "Currently focused on",
     body: "Building in public for 90 days, validating Spend to Invoice, and using rvdobuilds.com as a public record of my shift from IT architect to AI-assisted product builder.",
   },
   {

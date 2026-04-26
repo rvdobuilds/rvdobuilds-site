@@ -5,6 +5,7 @@ import { Section } from "@/components/ui/Section";
 import spendmeterScreen from "@/assets/images/spendmeter-screen.jpg";
 import daywellMockup from "@/assets/images/daywell-mockup.jpg";
 import workcompassScreen from "@/assets/images/workcompass-screen.jpg";
+import spendtoinvoiceScreen from "@/assets/images/spendtoinvoice-screen.jpg";
 
 export const metadata = {
   title: "Work - Rvdobuilds",
@@ -19,6 +20,7 @@ const externalLinkClass =
   "text-accent transition-colors hover:text-accent-hover";
 
 type WorkItem = {
+  id?: string;
   name: string;
   description: string;
   metaLabel: "Status" | "Platform";
@@ -29,6 +31,7 @@ type WorkItem = {
 
 const PRODUCTS: WorkItem[] = [
   {
+    id: "spendtoinvoice",
     name: "Spend to Invoice",
     description:
       "Agencies that manage Google Ads for multiple clients still invoice by hand: pulling spend, calculating fees, and copying numbers into templates every month. Spend to Invoice automates that loop.",
@@ -46,8 +49,11 @@ const PRODUCTS: WorkItem[] = [
         </a>
       </>
     ),
+    image: spendtoinvoiceScreen,
+    imageAlt: "Spend to Invoice product screenshot",
   },
   {
+    id: "workcompass",
     name: "WorkCompass AI",
     description:
       "Most office workers know AI could help them, but don’t know where to start. WorkCompass asks a few focused questions and points you toward the two or three use cases most likely to actually stick.",
@@ -72,6 +78,7 @@ const PRODUCTS: WorkItem[] = [
 
 const PERSONAL: WorkItem[] = [
   {
+    id: "spendmeter",
     name: "SpendMeter",
     description:
       "I didn’t want a budgeting app. I wanted one number: what can I safely spend right now, before my next payday. So I built it. The gauge tells you at a glance: green, orange, or red.",
@@ -93,6 +100,7 @@ const PERSONAL: WorkItem[] = [
     imageAlt: "SpendMeter home screen with safe-to-spend gauge",
   },
   {
+    id: "homereps",
     name: "HomeReps",
     description:
       "A workout logger built around my actual training routine: bodyweight, home, limited time, young kids. No gym features, no bloat. Log a set in under five seconds.",
@@ -100,6 +108,7 @@ const PERSONAL: WorkItem[] = [
     meta: <>iPhone</>,
   },
   {
+    id: "workframe",
     name: "Workframe",
     description:
       "I kept making the same decisions about which tool to use for what. So I wrote them down, turned them into flows and rules, and built a lightweight reference I actually open. It runs my personal operating system.",
@@ -119,6 +128,7 @@ const PERSONAL: WorkItem[] = [
     ),
   },
   {
+    id: "daywell",
     name: "DayWell",
     description:
       "A minimal daily health timeline for tracking the small habits that compound: weight, fasting, coffee, meals, creatine, cold showers.",
@@ -128,6 +138,7 @@ const PERSONAL: WorkItem[] = [
     imageAlt: "DayWell today screen on iPhone",
   },
   {
+    id: "todomode",
     name: "TodoMode",
     description:
       "A calm, focused planning app for turning projects into clear weekly and daily actions. Built because most planning tools do too much.",
@@ -138,15 +149,18 @@ const PERSONAL: WorkItem[] = [
 
 function WorkCard({ item }: { item: WorkItem }) {
   return (
-    <article className="flex flex-col rounded-xl border border-[var(--border-subtle)] bg-card p-6 transition-colors duration-200 hover:bg-card-hover">
+    <article
+      id={item.id}
+      className="flex scroll-mt-20 flex-col rounded-xl border border-[var(--border-subtle)] bg-card p-6 transition-colors duration-200 hover:bg-card-hover"
+    >
       {item.image ? (
         <div className="mb-5 inline-flex w-fit overflow-hidden rounded-lg border border-[var(--border-subtle)] bg-card-nested">
           <Image
             src={item.image}
             alt={item.imageAlt ?? ""}
             placeholder="blur"
-            className="h-28 w-auto object-contain"
-            sizes="160px"
+            className="h-36 w-auto object-contain sm:h-28"
+            sizes="(min-width: 640px) 160px, 220px"
           />
         </div>
       ) : null}
