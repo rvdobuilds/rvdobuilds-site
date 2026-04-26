@@ -72,7 +72,7 @@ export default function AboutPage() {
           </div>
           <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm">
             <a
-              href="#"
+              href="https://nl.linkedin.com/in/royvandenoosten"
               target="_blank"
               rel="noopener noreferrer"
               className={externalLinkClass}
