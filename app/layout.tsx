@@ -15,10 +15,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Rvdobuilds",
-  description: "Useful digital products. Clear by design.",
+  description:
+    "IT architect turned AI-assisted product builder. I turn business problems into clear, usable products.",
   openGraph: {
     title: "Rvdobuilds",
-    description: "Useful digital products. Clear by design.",
+    description:
+      "IT architect turned AI-assisted product builder. I turn business problems into clear, usable products.",
     type: "website",
   },
 };

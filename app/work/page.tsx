@@ -1,10 +1,15 @@
 import type { ReactNode } from "react";
+import type { StaticImageData } from "next/image";
+import Image from "next/image";
 import { Section } from "@/components/ui/Section";
+import spendmeterScreen from "@/assets/images/spendmeter-screen.jpg";
+import daywellMockup from "@/assets/images/daywell-mockup.jpg";
+import workcompassScreen from "@/assets/images/workcompass-screen.jpg";
 
 export const metadata = {
-  title: "Work — Rvdobuilds",
+  title: "Work - Rvdobuilds",
   description:
-    "Products, personal tools, and small things I have built.",
+    "IT architect turned AI-assisted product builder. I turn business problems into clear, usable products.",
 };
 
 const eyebrowClass =
@@ -18,6 +23,8 @@ type WorkItem = {
   description: string;
   metaLabel: "Status" | "Platform";
   meta: ReactNode;
+  image?: StaticImageData;
+  imageAlt?: string;
 };
 
 const PRODUCTS: WorkItem[] = [
@@ -58,6 +65,8 @@ const PRODUCTS: WorkItem[] = [
         </a>
       </>
     ),
+    image: workcompassScreen,
+    imageAlt: "WorkCompass AI landing page",
   },
 ];
 
@@ -69,7 +78,7 @@ const PERSONAL: WorkItem[] = [
     metaLabel: "Platform",
     meta: (
       <>
-        iPhone &mdash;{" "}
+        iPhone -{" "}
         <a
           href="https://spendmeter.app"
           target="_blank"
@@ -80,6 +89,8 @@ const PERSONAL: WorkItem[] = [
         </a>
       </>
     ),
+    image: spendmeterScreen,
+    imageAlt: "SpendMeter home screen with safe-to-spend gauge",
   },
   {
     name: "HomeReps",
@@ -95,7 +106,7 @@ const PERSONAL: WorkItem[] = [
     metaLabel: "Platform",
     meta: (
       <>
-        Web &mdash;{" "}
+        Web -{" "}
         <a
           href="https://workframe.rvdobuilds.com"
           target="_blank"
@@ -113,6 +124,8 @@ const PERSONAL: WorkItem[] = [
       "A minimal daily health timeline for tracking the small habits that compound: weight, fasting, coffee, meals, creatine, cold showers.",
     metaLabel: "Platform",
     meta: <>iPhone</>,
+    image: daywellMockup,
+    imageAlt: "DayWell today screen on iPhone",
   },
   {
     name: "TodoMode",
@@ -126,6 +139,17 @@ const PERSONAL: WorkItem[] = [
 function WorkCard({ item }: { item: WorkItem }) {
   return (
     <article className="flex flex-col rounded-xl border border-[var(--border-subtle)] bg-card p-6 transition-colors duration-200 hover:bg-card-hover">
+      {item.image ? (
+        <div className="mb-5 inline-flex w-fit overflow-hidden rounded-lg border border-[var(--border-subtle)] bg-card-nested">
+          <Image
+            src={item.image}
+            alt={item.imageAlt ?? ""}
+            placeholder="blur"
+            className="h-28 w-auto object-contain"
+            sizes="160px"
+          />
+        </div>
+      ) : null}
       <h3 className="text-base font-semibold text-foreground">{item.name}</h3>
       <p className="mt-2.5 flex-1 text-sm leading-relaxed text-muted">
         {item.description}
@@ -152,7 +176,7 @@ export default function WorkPage() {
       </Section>
 
       <Section id="products" className="pt-0">
-        <h2 className={`mb-2 ${eyebrowClass}`}>Products</h2>
+        <h2 className={`mb-2 ${eyebrowClass}`}>Commercial bets</h2>
         <p className="mb-8 max-w-2xl text-sm leading-relaxed text-muted">
           These started as real problems I wanted to solve for others.
         </p>
@@ -165,7 +189,7 @@ export default function WorkPage() {
 
       <section className="bg-section">
         <Section id="built-for-myself">
-          <h2 className={`mb-2 ${eyebrowClass}`}>Built for myself</h2>
+          <h2 className={`mb-2 ${eyebrowClass}`}>Personal tools</h2>
           <p className="mb-8 max-w-2xl text-sm leading-relaxed text-muted">
             I ran into a problem. I built a thing. I still use it.
           </p>

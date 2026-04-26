@@ -1,9 +1,11 @@
+import Image from "next/image";
 import { Section } from "@/components/ui/Section";
+import royPhoto from "@/assets/images/roy-photo.jpg";
 
 export const metadata = {
-  title: "About — Rvdobuilds",
+  title: "About - Rvdobuilds",
   description:
-    "IT architect by day. Product builder by habit. AI-assisted development closed the gap between seeing a solution and shipping it.",
+    "IT architect turned AI-assisted product builder. I turn business problems into clear, usable products.",
 };
 
 const eyebrowClass =
@@ -19,6 +21,20 @@ export default function AboutPage() {
         <h1 className="text-2xl font-semibold tracking-tight text-foreground">
           About
         </h1>
+        <div className="mt-8 overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-card w-40 sm:w-48">
+          <Image
+            src={royPhoto}
+            alt="Roy van den Oosten"
+            placeholder="blur"
+            sizes="(min-width: 640px) 12rem, 10rem"
+            className="h-auto w-full object-cover"
+            priority
+          />
+        </div>
+        <p className="mt-8 max-w-2xl text-base leading-relaxed text-muted">
+          IT architect turned AI-assisted product builder. I turn business
+          problems into clear, usable products.
+        </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base leading-relaxed text-muted">
           <p>
             I&rsquo;ve spent most of my career in the space between business
@@ -58,16 +74,18 @@ export default function AboutPage() {
       </Section>
 
       <section className="bg-section">
-        <Section id="what-im-looking-for">
-          <h2 className={`mb-6 ${eyebrowClass}`}>What I&rsquo;m looking for</h2>
-          <div className="max-w-2xl text-base leading-relaxed text-muted">
+        <Section id="work-with-me">
+          <h2 className={`mb-6 ${eyebrowClass}`}>Work with me</h2>
+          <div className="max-w-2xl space-y-5 text-base leading-relaxed text-muted">
             <p>
-              I&rsquo;m exploring what comes next. Whether that&rsquo;s a
-              product that finds its own revenue, a role where I can think and
-              build instead of just advise, or something I haven&rsquo;t found
-              a name for yet. If you&rsquo;re building something and need
-              someone who can go from messy problem to working product without
-              a lot of hand-holding, I&rsquo;d be interested in talking.
+              I&rsquo;m interested in product, UX, AI-assisted prototyping, and
+              builder-style roles or projects where the hard part is turning
+              business problems into something clear, usable, and shipped.
+            </p>
+            <p>
+              Best fit: early product work, internal tools, workflow products,
+              AI adoption tools, product discovery, UX structure, and fast
+              prototyping.
             </p>
           </div>
           <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm">
@@ -90,6 +108,34 @@ export default function AboutPage() {
           </div>
         </Section>
       </section>
+
+      <Section className="pt-0">
+        <div className="max-w-2xl">
+          <p className="text-base leading-relaxed text-muted">
+            If you&rsquo;re building something and need someone who can
+            structure the problem, shape the product, and ship the first
+            version, reach out.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <a
+              href="https://nl.linkedin.com/in/royvandenoosten"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={externalLinkClass}
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://x.com/royinprogress"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={externalLinkClass}
+            >
+              X: @RoyInProgress
+            </a>
+          </div>
+        </div>
+      </Section>
     </main>
   );
 }
