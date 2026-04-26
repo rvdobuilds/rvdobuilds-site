@@ -67,7 +67,7 @@ export default function AboutPage() {
             together.
           </p>
           <p>
-            Now I ship products alongside a full-time job, a mortgage, and two
+            Now I ship products while working a full-time job and enjoying my busy life with two
             young kids. The time is limited. The output is deliberate.
           </p>
         </div>
