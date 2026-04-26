@@ -1,6 +1,39 @@
 import { Section } from "@/components/ui/Section";
 import { ButtonLink } from "@/components/ui/Button";
 
+const BUILT_SO_FAR = [
+  {
+    name: "Spend to Invoice",
+    description: "B2B billing workflow",
+    href: "/work#spendtoinvoice",
+  },
+  {
+    name: "WorkCompass AI",
+    description: "AI work assessment",
+    href: "/work#workcompass",
+  },
+  {
+    name: "SpendMeter",
+    description: "iPhone finance app",
+    href: "/work#spendmeter",
+  },
+  {
+    name: "DayWell",
+    description: "iPhone health timeline",
+    href: "/work#daywell",
+  },
+  {
+    name: "HomeReps",
+    description: "iPhone workout logger",
+    href: "/work#homereps",
+  },
+  {
+    name: "TodoMode",
+    description: "web planning app",
+    href: "/work#todomode",
+  },
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -28,6 +61,25 @@ export default function Home() {
           </div>
         </Section>
       </section>
+
+      <Section id="built-so-far" className="pt-0">
+        <h2 className="text-[11px] font-medium uppercase tracking-[0.18em] text-eyebrow">
+          Built so far
+        </h2>
+        <ul className="mt-6 max-w-2xl space-y-3 text-base leading-relaxed">
+          {BUILT_SO_FAR.map((item) => (
+            <li key={item.name}>
+              <a
+                href={item.href}
+                className="text-accent transition-colors hover:text-accent-hover"
+              >
+                {item.name}
+              </a>
+              <span className="text-muted"> - {item.description}</span>
+            </li>
+          ))}
+        </ul>
+      </Section>
 
       <footer className="border-t border-[var(--border-subtle)] bg-section">
         <Section className="py-10 md:py-12">

@@ -83,28 +83,10 @@ export default function AboutPage() {
               business problems into something clear, usable, and shipped.
             </p>
             <p>
-              Best fit: early product work, internal tools, workflow products,
-              AI adoption tools, product discovery, UX structure, and fast
-              prototyping.
+              Best fit: teams with messy internal workflows, unclear product
+              ideas, or AI adoption problems that need to become a clear first
+              version.
             </p>
-          </div>
-          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm">
-            <a
-              href="https://nl.linkedin.com/in/royvandenoosten"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={externalLinkClass}
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://x.com/royinprogress"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={externalLinkClass}
-            >
-              X: @RoyInProgress
-            </a>
           </div>
         </Section>
       </section>
