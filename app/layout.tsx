@@ -38,28 +38,28 @@ function Navbar() {
         </Link>
         <div className="flex flex-wrap items-center justify-end gap-x-5 gap-y-2 sm:gap-x-8">
           <Link
-            href="/#products"
+            href="/"
             className="text-sm text-muted transition-colors hover:text-foreground"
           >
-            Products
+            Home
           </Link>
           <Link
-            href="/#games"
+            href="/work"
             className="text-sm text-muted transition-colors hover:text-foreground"
           >
-            Games
+            Work
           </Link>
           <Link
-            href="/#tools"
-            className="text-sm text-muted transition-colors hover:text-foreground"
-          >
-            Tools
-          </Link>
-          <Link
-            href="/#about"
+            href="/about"
             className="text-sm text-muted transition-colors hover:text-foreground"
           >
             About
+          </Link>
+          <Link
+            href="/now"
+            className="text-sm text-muted transition-colors hover:text-foreground"
+          >
+            Now
           </Link>
         </div>
       </div>
