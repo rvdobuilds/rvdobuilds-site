@@ -13,9 +13,7 @@ export default function Home() {
             I turn business problems into working products.
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted">
-            IT architect with 10 years between business and technology. Now I
-            use AI-assisted development to go from problem and product thinking
-            to shipped web and mobile products.
+            IT architect with 10 years of experience at the intersection of business and technology. Now I use AI-assisted development to turn problem and product thinking into working web and mobile products.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <ButtonLink href="/work" variant="primary">
