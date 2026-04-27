@@ -6,6 +6,8 @@ import spendmeterScreen from "@/assets/images/spendmeter-screen.jpg";
 import daywellMockup from "@/assets/images/daywell-mockup.jpg";
 import workcompassScreen from "@/assets/images/workcompass-screen.jpg";
 import spendtoinvoiceScreen from "@/assets/images/spendtoinvoice-screen.jpg";
+import homerepsScreen from "@/assets/images/homereps-screen.jpg";
+import workframeScreen from "@/assets/images/workframe-screen.jpg";
 
 export const metadata = {
   title: "Work - Rvdobuilds",
@@ -100,14 +102,6 @@ const PERSONAL: WorkItem[] = [
     imageAlt: "SpendMeter home screen with safe-to-spend gauge",
   },
   {
-    id: "homereps",
-    name: "HomeReps",
-    description:
-      "A workout logger built around my actual training routine: bodyweight, home, limited time, young kids. No gym features, no bloat. Log a set in under five seconds.",
-    metaLabel: "Platform",
-    meta: <>iPhone</>,
-  },
-  {
     id: "workframe",
     name: "Workframe",
     description:
@@ -126,6 +120,8 @@ const PERSONAL: WorkItem[] = [
         </a>
       </>
     ),
+    image: workframeScreen,
+    imageAlt: "Workframe product screenshot",
   },
   {
     id: "daywell",
@@ -138,12 +134,14 @@ const PERSONAL: WorkItem[] = [
     imageAlt: "DayWell today screen on iPhone",
   },
   {
-    id: "todomode",
-    name: "TodoMode",
+    id: "homereps",
+    name: "HomeReps",
     description:
-      "A calm, focused planning app for turning projects into clear weekly and daily actions. Built because most planning tools do too much.",
+      "A workout logger built around my actual training routine: bodyweight, home, limited time, young kids. No gym features, no bloat. Log a set in under five seconds.",
     metaLabel: "Platform",
-    meta: <>Web</>,
+    meta: <>iPhone</>,
+    image: homerepsScreen,
+    imageAlt: "HomeReps workout logging on iPhone",
   },
 ];
 

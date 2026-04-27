@@ -58,13 +58,6 @@ export const OTHER_HOME_PRODUCTS: HomeProduct[] = [
     href: "https://daywell.rvdobuilds.com/",
   },
   {
-    name: "TodoMode",
-    shortDescription:
-      "A calm, focused planning app for turning projects into clear weekly and daily execution.",
-    ctaLabel: "Visit product",
-    href: "https://todo-mode.rvdobuilds.com/",
-  },
-  {
     name: "HomeReps",
     shortDescription:
       "Minimal home workout logging for GTG sets and simple sessions.",
