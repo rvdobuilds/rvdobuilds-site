@@ -102,6 +102,26 @@ const PERSONAL: WorkItem[] = [
     imageAlt: "SpendMeter home screen with safe-to-spend gauge",
   },
   {
+    id: "homereps",
+    name: "HomeReps",
+    description:
+      "A workout logger built around my actual training routine: bodyweight, home, limited time, young kids. No gym features, no bloat. Log a set in under five seconds.",
+    metaLabel: "Platform",
+    meta: <>iPhone</>,
+    image: homerepsScreen,
+    imageAlt: "HomeReps workout logging on iPhone",
+  },
+  {
+    id: "daywell",
+    name: "DayWell",
+    description:
+      "A minimal daily health timeline for tracking the small habits that compound: weight, fasting, coffee, meals, creatine, cold showers.",
+    metaLabel: "Platform",
+    meta: <>iPhone</>,
+    image: daywellMockup,
+    imageAlt: "DayWell today screen on iPhone",
+  },
+  {
     id: "workframe",
     name: "Workframe",
     description:
@@ -122,26 +142,6 @@ const PERSONAL: WorkItem[] = [
     ),
     image: workframeScreen,
     imageAlt: "Workframe product screenshot",
-  },
-  {
-    id: "daywell",
-    name: "DayWell",
-    description:
-      "A minimal daily health timeline for tracking the small habits that compound: weight, fasting, coffee, meals, creatine, cold showers.",
-    metaLabel: "Platform",
-    meta: <>iPhone</>,
-    image: daywellMockup,
-    imageAlt: "DayWell today screen on iPhone",
-  },
-  {
-    id: "homereps",
-    name: "HomeReps",
-    description:
-      "A workout logger built around my actual training routine: bodyweight, home, limited time, young kids. No gym features, no bloat. Log a set in under five seconds.",
-    metaLabel: "Platform",
-    meta: <>iPhone</>,
-    image: homerepsScreen,
-    imageAlt: "HomeReps workout logging on iPhone",
   },
 ];
 
