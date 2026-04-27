@@ -27,11 +27,6 @@ const BUILT_SO_FAR = [
     description: "iPhone workout logger",
     href: "/work#homereps",
   },
-  {
-    name: "TodoMode",
-    description: "web planning app",
-    href: "/work#todomode",
-  },
 ];
 
 export default function Home() {
