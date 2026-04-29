@@ -73,6 +73,13 @@ export default function Home() {
   </Section>
 </section>
 
+      <div className="mx-auto w-full max-w-[var(--max-width-content)] px-6 pb-8 pt-4 sm:px-8 md:pb-12 md:pt-6">
+        <p className="max-w-xl text-sm leading-relaxed text-eyebrow">
+          Currently building in public: small apps, practical AI workflows, and the
+          path to €10k/month.
+        </p>
+      </div>
+
       <Section id="built-so-far" className="pt-0">
         <h2 className="text-[11px] font-medium uppercase tracking-[0.18em] text-eyebrow">
           Built so far

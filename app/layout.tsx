@@ -57,12 +57,6 @@ function Navbar() {
           >
             About
           </Link>
-          <Link
-            href="/now"
-            className="text-sm text-muted transition-colors hover:text-foreground"
-          >
-            Now
-          </Link>
         </div>
       </div>
     </nav>
