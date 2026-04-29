@@ -59,7 +59,7 @@ export default function Home() {
               </div>
             </div>
             <div className="md:col-span-5">
-              <div className="relative mx-auto aspect-[4/5] w-full max-w-[31.25rem] overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-card md:mx-0 md:max-w-none">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-card">
                 <Image
                   src="/assets/images/home-visual.png"
                   alt=""
