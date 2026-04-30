@@ -31,45 +31,41 @@ export default function AboutPage() {
             priority
           />
         </div>
-        <p className="mt-8 max-w-2xl text-base leading-relaxed text-muted">
-          IT architect turned AI-assisted product builder. I turn business
-          problems into clear, usable products.
-        </p>
-        <div className="mt-10 max-w-2xl space-y-6 text-base leading-relaxed text-muted">
+        <div className="mt-8 max-w-2xl space-y-6 text-base leading-relaxed text-muted">
+          <p>I&apos;m Roy, an IT architect turned AI-assisted product builder.</p>
           <p>
-            I&rsquo;ve spent most of my career in the space between business
-            and IT. The place where requirements get lost in translation, where
-            good ideas become complicated systems, and where someone has to ask
-            the uncomfortable question: &ldquo;but what problem are we actually
-            solving?&rdquo;
+            I&apos;ve spent most of my career in the space between business and
+            IT.
           </p>
-          <p>That someone was usually me.</p>
+          <p>The place where requirements get lost in translation.</p>
+          <p>Where good ideas become complicated systems.</p>
+          <p>Where someone eventually has to ask:</p>
+          <p>&quot;But what problem are we actually solving?&quot;</p>
+          <p>That someone was often me.</p>
           <p>
-            I started out as a business application manager and requirements
-            engineer, moved into business analysis, and eventually into IT
-            architecture. For the last three years I&rsquo;ve worked as an IT
-            architect: scoping solutions, making trade-offs explicit, and
-            keeping technical decisions connected to what the business actually
-            needs.
+            For the last ten years I&apos;ve worked in the complex middle
+            between business problems and technical solutions: requirements,
+            workflows, trade-offs, architecture, and delivery.
           </p>
           <p>
-            I was always close to technology. I understood systems. I could
-            describe exactly what needed to be built. But I didn&rsquo;t build
-            it myself. That part belonged to someone else.
+            I learned how to see the shape of a problem before jumping into the
+            solution.
           </p>
           <p>
-            Then AI-assisted development changed the equation. Suddenly the gap
-            between &ldquo;I can see the solution clearly&rdquo; and &ldquo;I
-            can ship the solution&rdquo; collapsed. I started building. Small
-            tools at first, then more complete products. The architecture
-            background turned out to be exactly as useful as I expected. I
-            don&rsquo;t just build features, I think about how the pieces fit
-            together.
+            For a long time, that was where my role stopped. I could describe
+            what needed to be built, but I wasn&apos;t the one building it.
           </p>
+          <p>AI-assisted development changed that.</p>
           <p>
-            Now I ship products while working a full-time job and enjoying my busy life with two
-            young kids. The time is limited. The output is deliberate.
+            Now when I see a problem, I can turn it into something real: a
+            prototype, a small tool, a landing page, a mobile app, or a first
+            working product.
           </p>
+          <p>I&apos;m trying to build clearer, more useful things.</p>
+          <p>
+            I do this alongside a full-time job and life with two young kids.
+          </p>
+          <p>Time is limited. Everything I build is deliberate.</p>
         </div>
       </Section>
 
@@ -78,27 +74,26 @@ export default function AboutPage() {
           <h2 className={`mb-6 ${eyebrowClass}`}>Work with me</h2>
           <div className="max-w-2xl space-y-5 text-base leading-relaxed text-muted">
             <p>
-              I&rsquo;m interested in product, UX, AI-assisted prototyping, and
-              builder-style roles or projects where the hard part is turning
-              business problems into something clear, usable, and shipped.
+              I help teams with product, UX, AI-assisted prototyping, and
+              builder-style projects where the hard part is turning a messy
+              business problem into something clear, usable, and shipped.
             </p>
             <p>
               Best fit: teams with messy internal workflows, unclear product
-              ideas, or AI adoption problems that need to become a clear first
-              version.
+              ideas, or AI adoption problems that need a practical first version.
             </p>
+            <p>
+              Especially when the problem is too vague for a straight build
+              brief, but too practical to stay in strategy decks.
+            </p>
+            <p>If that sounds useful, reach out.</p>
           </div>
         </Section>
       </section>
 
       <Section className="pt-0">
         <div className="max-w-2xl">
-          <p className="text-base leading-relaxed text-muted">
-            If you&rsquo;re building something and need someone who can
-            structure the problem, shape the product, and ship the first
-            version, reach out.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
             <a
               href="https://nl.linkedin.com/in/royvandenoosten"
               target="_blank"
